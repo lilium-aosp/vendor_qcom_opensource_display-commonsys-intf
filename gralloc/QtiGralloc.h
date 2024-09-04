@@ -29,7 +29,7 @@
  * IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
  * Changes from Qualcomm Innovation Center are provided under the following license:
- * Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+ * Copyright (c) 2022-2023 Qualcomm Innovation Center, Inc. All rights reserved.
  * SPDX-License-Identifier: BSD-3-Clause-Clear
  */
 
@@ -144,6 +144,8 @@ static const MetadataType MetadataType_MemHandle = {VENDOR_QTI, QTI_MEM_HANDLE};
 static const MetadataType MetadataType_TimedRendering = {VENDOR_QTI, QTI_TIMED_RENDERING};
 static const MetadataType MetadataType_CustomContentMetadata = {VENDOR_QTI,
                                                                 QTI_CUSTOM_CONTENT_METADATA};
+static const MetadataType MetadataType_BufferDequeueDuration = {VENDOR_QTI,
+                                                                QTI_BUFFER_DEQUEUE_DURATION};
 
 // 0 is also used as invalid value in standard metadata
 static const MetadataType MetadataType_Invalid = {VENDOR_QTI, 0};
@@ -157,6 +159,8 @@ static const aidl::android::hardware::graphics::common::ExtendableType
     PlaneLayoutComponentType_Raw = {VENDOR_QTI, PLANE_COMPONENT_TYPE_RAW};
 static const aidl::android::hardware::graphics::common::ExtendableType
     PlaneLayoutComponentType_Meta = {VENDOR_QTI, PLANE_COMPONENT_TYPE_META};
+static const aidl::android::hardware::graphics::common::ExtendableType
+    PlaneLayoutComponentType_Blob = {VENDOR_QTI, PLANE_COMPONENT_TYPE_BLOB};
 
 Error decodeMetadataState(hidl_vec<uint8_t> &in, bool *out);
 Error encodeMetadataState(bool *in, hidl_vec<uint8_t> *out);
